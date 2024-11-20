@@ -18,17 +18,18 @@ This file is suggested for studies aimed at biological data analysis.
 The exon annotation of ERCC+SIRV+longSIRV spike-in transcripts.
 Here, we made a few modifications to SIRV spike-in transcripts, we labeled 'A', 'B', 'C', and 'D' after the gene IDs based on the structure of these transcripts from the same genomic region. Transcripts with the same gene ID indicate they are different isoforms from the same gene locus, while transcripts with different postfixes (e.g., SIRV3A, SIRV3B) indicate they should be different genes since they are from two different strands.
 This kind of modification came from the LRGASP project (https://lrgasp.github.io/lrgasp-submissions/docs/reference-genomes.html), but I made a small change. Because SIRV406 overlaps with SIRV401/2/7 but does not overlap with SIRV403/4/5/8. In LRGASP annotation, SIRV406 is from SIRV4B (a single-isoform gene). But here we believe SIRV406 belongs to SIRV1A because it partially overlaps with SIRV401/2/7. So we do not have SIRV4B in our annotation files to distinguish with LRGASP annotation.
+To avoid the longSIRV have the same transcript_id and gene_id, we add *-001 to the transcript ids. For example, transcript_id of SIRV4001 is SIRV4001-001.
 
 #### 4. ERCC.SIRV.longSIRV.transcripts.extended.with.polyA.tail.fa
 
 This file is suggested for studies aimed at tool development.
-The header format is the same with 'ERCC.SIRV.longSIRV.transcripts.with.polyA.tail.fa'.
+The header format is the same with 'ERCC.SIRV.longSIRV.transcripts.with.polyA.tail.fa', but we added the annotation of 'negative' tagged transcripts even if these RNA molecules were not included in the kits.
 For SIRVs, this file includes transcripts tagged as both 'positive' and 'negative', while 'negative' can be used as negative controls when evaluating tools' performance.
 
 #### 5. ERCC.SIRV.longSIRV.extended.annotation.gtf
 
 This file is suggested for studies aimed at tool development.
-The format is the same with 'ERCC.SIRV.longSIRV.annotation.gtf'.
+The format is the same with 'ERCC.SIRV.longSIRV.annotation.gtf', but we added the annotation of 'negative' tagged transcripts even if these RNA molecules were not included in the kits.
 For SIRVs, this file includes transcripts tagged as both 'positive' and 'negative', while 'negative' can used as negative controls when evaluating the performance of tools.
 
 #### 6. SIRV_Set4_transcript_annotation.txt/SIRV_Set4_transcript_annotation.xlsx
